@@ -1,0 +1,13 @@
+<%= form_for([@article, @comment]) do |f| %>
+    <h2>Edit comment</h2>
+    <div class="color-blue">
+
+          <%= @comment.user.username%><br>
+
+          <%= f.text_area :body %>
+
+          <%= submit_tag "Edit", class: "btn btn-primary" %>
+    </div>
+<% end %>
+
+<%= link_to 'Back', {:controller => 'articles', :action => 'show', :id => @comment.article.id}, :class=>"btn btn-link"  %>

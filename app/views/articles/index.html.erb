@@ -1,0 +1,27 @@
+<h2>Listing articles</h2>
+
+  <% @articles.each do |article| %>
+    <div class="color-blue">
+          <h3>
+              <%= link_to article.title, {:controller => 'articles', :action => 'show', :id => article.id },  :class=>"btn btn-link link-title"%>
+          </h3>
+              <span class='pull-right'><%= article.created_at.strftime('%d/%m/%Y')%></span><br>
+              By <%= article.user.username%>
+          <h4>
+          <%= article.text.truncate(50) %>... <%= link_to 'read more' , {:controller => 'articles', :action => 'show', :id => article.id },  :class=>"btn btn-link"%><br>
+          <h4>
+          <% if current_user  && article.user == current_user %>
+              <%= link_to 'Edit article', {:controller => 'articles', :action => 'edit', :id => article.id},  :class=>"btn btn-warning" %>
+              <%= link_to 'Delete article', {:controller => 'articles', :action => 'destroy', :id => article.id} , method: :delete,   :class=>"btn btn-danger", data: { confirm: 'Are you sure?' } %>
+          <% end %>
+          <br>
+    </div>
+  <% end %>
+
+
+<%= will_paginate(@articles) %>
+
+
+<% if current_user %>
+    <%= link_to 'New article', {:controller => 'articles', :action => 'new'},  :class=>"btn btn-link"%>
+<% end %>

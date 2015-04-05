@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+  font-family: 'Indie Flower';
+ }
+
+ h1 {
+   color:  #FA5882;
+   font-family: 'Bangers';
+ }
+
+ h2 {
+   color: #FA5882;
+ }
+
+ h3{
+   color: #F6CED8;
+ }
+
+ textarea {
+   width: 95% !important;
+   height: 250px;
+ }
+
+ text{
+   width: 95% !important;
+ }
+
+ label {
+   font-size: 25px;
+ }
+
+
+ .btn-link{
+   font-size: 25px;
+ }
+
+ .link-title{
+   font-size: 35px;
+ }
+
+ .login{
+   float: right;
+   margin-top: -50px;
+   font-size: 20px;
+   color: #A4A4A4;
+ }
+
+ .color-blue {
+   background-color: #cee3f6;
+   background-image: none;
+   height: auto;
+   margin-bottom: 15px;
+   padding: 50px;
+ }
+
+ .btn {
+   font-family: 'Indie Flower';
+   font-size: 18px;
+ }
+
+ .navbar{
+   background-color: #5882FA;
+
+ }
+
+ .navbar-inner{
+   background-color: #5882FA;
+   background-image: none;
+   height: 50px;
+ }
+
+ .container{
+   margin-top: 30px;
+ }
+
+.btn-login{
+  color: #fff !important;
+}
+
+.btn-danger{
+  color: #F2F2F2 !important;
+}
+
+.btn-warning{
+  color: #F2F2F2 !important;
+}
